@@ -66,3 +66,19 @@ GROUP BY
 -- IRON MAIDEN avec 21 albums et 213 titres
 -- Led Zeppelin avec 14 albums et 114 titres
 -- Deep Purple avec 11 albums et 92 titres
+
+-- affichage direct du top 3 en nombre d'album
+SELECT
+  Artist.Name AS groupe,
+  COUNT(DISTINCT Album.AlbumId) AS nombre_album,
+  COUNT(Track.TrackId) AS nombre_chansons
+FROM
+  Artist
+  INNER JOIN Album ON Artist.ArtistId = Album.ArtistId
+  INNER JOIN Track ON Album.AlbumId = Track.AlbumId
+GROUP BY
+  Artist.ArtistId;
+ORDER BY
+  nombre_album DESC
+LIMIT
+  3;
