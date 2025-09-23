@@ -1,4 +1,4 @@
--- Duree moyenne des morceaux en millisecondes
+-- Duree moyenne des morceaux en secondes
 SELECT
   AVG(Track.Milliseconds) / 1000
 FROM
