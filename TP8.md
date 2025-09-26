@@ -48,3 +48,5 @@ J'ai fais un MLD qui me semblait plus correcte avec les données accumulées :
 ![Capture du MLD](./mld.png)
 
 3. Création de la nouvelle DB.  
+Utilisation de script en PHP pour parcourir les aanciennes tables en SQL, et faire des fichiers de migrations SQL pour les nouvelles
+tables (Département en premier, puis villes, puis code postal et code_postal_ville et enfin population).
