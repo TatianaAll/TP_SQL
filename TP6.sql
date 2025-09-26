@@ -26,7 +26,7 @@ GROUP BY
 -- les titres qui n'ont jamais été achetés JOIN avec InvoiceLine et Customer
 SELECT
   Track.TrackId AS id_chanson,
-  Track.Name AS nom_chanson,
+  Track.Name AS nom_chanson
 FROM
   Track
   LEFT JOIN InvoiceLine ON Track.TrackId = InvoiceLine.TrackId
